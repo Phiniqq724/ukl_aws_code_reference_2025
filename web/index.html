@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f8fafc;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 500px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        padding: 32px 28px 24px 28px;
+      }
+      h2,
+      h3 {
+        text-align: center;
+        color: #2d3748;
+        margin-bottom: 18px;
+      }
+      form {
+        margin-bottom: 30px;
+      }
+      label {
+        display: block;
+        margin-top: 16px;
+        color: #4a5568;
+        font-weight: 500;
+      }
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 12px 0;
+        margin-top: 6px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        background: #f1f5f9;
+        font-size: 1rem;
+        transition: border 0.2s;
+      }
+      input[type="text"]:focus,
+      textarea:focus {
+        border: 1.5px solid #3182ce;
+        outline: none;
+        background: #fff;
+      }
+      input[type="file"] {
+        margin-top: 8px;
+      }
+      button[type="submit"] {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px 0;
+        background: linear-gradient(90deg, #3182ce 0%, #63b3ed 100%);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(49, 130, 206, 0.08);
+        transition: background 0.2s;
+      }
+      button[type="submit"]:hover {
+        background: linear-gradient(90deg, #2563eb 0%, #4299e1 100%);
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+      }
+      li {
+        background: #f1f5f9;
+        margin-bottom: 14px;
+        padding: 14px 16px;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+        color: #2d3748;
+      }
+      .file-link {
+        display: block;
+        margin-top: 8px;
+        color: #3182ce;
+        text-decoration: underline;
+        font-size: 0.97em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Feedback Form</h2>
+      <form id="feedbackForm">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+        <input type="file" id="file" name="file" accept="image/*" required />
+        <button type="submit">Submit</button>
+      </form>
+      <h3>List of Feedback</h3>
+      <ul id="feedbackList"></ul>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
