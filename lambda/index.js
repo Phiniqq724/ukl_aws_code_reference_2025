@@ -12,8 +12,8 @@ const {
 const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
 const { randomUUID } = require("crypto");
 
-const baseClient = new DynamoDBClient({});
-const ddbClient = new DynamoDBDocumentClient.from(baseClient);
+const ddbClient = new DynamoDBClient({});
+const ddbDocClient = DynamoDBDocumentClient.from(ddbClient);
 const s3Client = new S3Client();
 
 const TableName = process.env.TABLE_NAME;
